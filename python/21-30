@@ -1,0 +1,98 @@
+
+21.user = input("Enter a word:")
+reversed_string=user[::-1]
+if user==reversed_string:
+   print("It is a palindrome.")
+else:
+   print("It is not a palindrome.")
+
+22.sentence=input("Enter a sentence:")
+vowel_count=0
+for letter in sentence:
+    if letter in "aeiou":
+      vowel_count+=1
+print(f"Number of vowels:{vowel_count}")
+   
+
+23.sentence=input("Enter a sentence:")
+character=input("Enter a letter:")
+char_count=0
+for letter in sentence:
+    if letter == character:
+       char_count+=1
+print(f"{character} appears {char_count} times in sentence")
+
+24.sentence=input("Enter a sentence:")
+words=sentence.split()
+words_in_sentence=len(words)
+print(f"No.of words present in sentence :{words_in_sentence}")
+
+25.sentence=input("Enter a sentence:")
+words=sentence.split()
+longest=""
+for word in words:
+   if len(word)>len(longest):
+      longest=word
+print(f"Longest word is :{longest}")
+
+26.sentence=input("Enter a sentence:")
+upper=0
+lower=0
+for letter in sentence:
+   if letter.isupper():
+      upper+=1
+   if letter.islower():
+      lower+=1
+print(f"Uppercase letters: {upper}\nLowercase letters: {lower}")   
+
+27.sentence=input("Enter a sentence:")
+length=len(sentence)
+word=0
+digit=0
+special_symbol=0
+for letter in sentence:
+    if letter.isalpha():
+       word+=1
+    elif letter.isdigit():
+       digit+=1
+    elif not letter.isalpha() and not letter.isdigit():
+       special_symbol+=1
+print(f"Letter:{word}\n Digit:{digit}\nSpecial characters:{special_symbol}")
+
+28.password=input("Enter the password (atleast 8 characters):")
+has_upper=False
+has_lower=False
+has_digit=False
+for letter in password:
+    if len(password)<8:
+       print("Password should contain atleast 8 characters")
+    elif letter.isupper():
+       has_upper=True
+    elif letter.islower():
+       has_lower=True
+    elif letter.isdigit():
+       has_digit=True
+if (
+    len(password)>=8
+    and has_upper
+    and has_lower
+    and has_digit
+):
+    print("Strong password")
+else:
+    print("Weak password")
+
+29.student={}
+student["name"]=input("Enter your name:")
+student["age"]=input("Enter your age:")
+student["course"]=input("Enter your course:")
+print(student)
+
+30.word = input("Enter a word: ")
+count = {}
+for letter in word:
+    if letter in count:
+       count[letter]+=1
+    else:
+       count[letter]=1
+print(count)

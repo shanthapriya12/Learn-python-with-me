@@ -1,0 +1,70 @@
+31.word = input("Enter a word: ")
+count={}
+max_char=""
+max_count=0
+for letter in word:
+   if letter in count:
+       count[letter]+=1
+   else:
+       count[letter]=1
+for letter in count:
+   if count[letter]>max_count:
+       max_count=count[letter]
+       max_char=letter
+print(f"Most frequent character: {max_char}\nCount: {max_count}")
+       
+32.user=input("Enter a sentence:")
+words_user=user.split()
+count={}
+for letter in words_user :
+   if letter in count:
+       count[letter]+=1
+   else:
+       count[letter]=1
+print(count)
+
+33.user=input("Enter a sentence:")
+words_user=user.split()
+count={}
+long_word=""
+length=0
+for letter in words_user :
+    count[letter]=len(letter)
+    if count[letter]>length:
+       length=count[letter]
+       long_word=letter
+print(count)
+print(f"Longest word: {long_word}\nLength: {length}")
+
+34.student={}
+entry=int(input("How many students they want to enter:"))
+top_stu=""
+max_mark=0
+for stu in range(entry):
+    name=input("Enter your name:")
+    mark=int(input("Enter your mark:"))
+    student[name]=mark
+    if mark>max_mark:
+       top_stu=name
+       max_mark=mark
+print(student)
+print(f"Top student: {top_stu}\nMarks: {max_mark}")
+
+35.student={}
+entry=int(input("How many students they want to enter:"))
+total=0
+for stu in range(entry):
+    name=input("Enter your name:")
+    mark=int(input("Enter your mark:"))
+    student[name]=mark
+    total+=mark
+    average = total / entry
+print(student)
+print(f"Average mark:{average:.2f}")
+   
+
+
+
+
+
+

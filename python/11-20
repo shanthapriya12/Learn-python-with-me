@@ -1,0 +1,103 @@
+11.num=int(input("Enter a positive number:"))
+count=num
+while count>0:
+  print(count)
+  count-=1
+print("Blast off !")
+
+  
+12.secret=5
+user=int(input("Guess the number:"))
+while user!=secret:
+  print("Wrong! Try again.")
+  user=int(input("Guess the number:"))
+print("Congratulations! You guessed it.")
+
+13.password = "python123"
+user=input("Enter the password:")
+while user!=password:
+  print("Incorrect password.")
+  user=input("Enter the password:")
+print("Access Granted!")
+
+
+14.balance = 1000
+user=1
+while user!=4:
+  print("1. Check Balance\n2. Deposit Money\n3. Withdraw Money\n4. Exit")
+  user=int(input("Enter a number(1-4):"))
+  if user==1:
+     print(balance)
+  if user==2:
+     deposit_balance=int(input("how much to deposit and add it to the balance:"))
+     balance += deposit_balance
+     print(balance)
+  if user==3:
+     withdraw=int(input("how much to withdraw:"))
+     if withdraw>balance:
+        print("Insufficient balance.")
+     else:
+        balance -= withdraw
+        print(balance)
+  if user>4:
+   print("Invalid choice. Please try again.")
+print("Thank you for using the ATM.")
+ 
+
+15.
+def greet_user(name):
+    print(f"Hello, {name}! Welcome to Python.")
+greet_user("Sweety")
+
+16.
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+def add_numbers(a,b):
+     c=a+b
+     return c
+result=add_numbers(a,b)
+print(result)
+
+17.
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+def find_largest(a,b,c):
+    if a>=b and a>=c:
+       largest=a
+    elif b>=a and b>=c:
+       largest=b
+    elif c>=a and c>=b:
+       largest=c
+    return largest
+largest_3=find_largest(a,b,c)
+print(largest_3)
+
+18.secret=7
+user=1
+attempt=0
+while user!=secret:
+  user=int(input("Enter the number to guess:"))
+  if user>secret:
+    print("Too High!")
+  elif user<secret:
+    print("Too Low!")
+  attempt+=1
+print("Congratulations!") 
+print(f"You guessed it in {attempt} attempts.")
+
+19.
+user = input("Enter your name:")
+print(user)
+length = len(user)
+name_upper = user.upper()
+name_lower = user.lower()
+print(length)
+print(name_upper)
+print(name_lower)
+
+20.
+name = input("Enter your name:")
+print(name)
+reversed_name=name[::-1]
+print(f"Reversed name:{reversed_name}")
