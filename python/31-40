@@ -62,6 +62,88 @@ for stu in range(entry):
 print(student)
 print(f"Average mark:{average:.2f}")
    
+36.student = {}
+entry = int(input("How many students? "))
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+print("Passed students:")
+for stu in student:
+    if student[stu]>=50:
+        print(stu, ":", student[stu])
+
+
+37.student={}
+entry = int(input("How many students want to enter? "))
+low_name=""
+low_mark=0
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+    if mark<low_mark:
+       low_mark=mark
+       low_name=name
+print(student)
+print(f"Student with the lowest marks:\n Name:{low_name}-mark:{low_mark}")
+
+38.student = {}
+entry = int(input("How many students? "))
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+for stu in student:
+    user=input("Enter student name to search:")
+    if stu is in student:
+       print(f"{stu}'s marks is {student[stu]}"  
+    else:
+       print("Student not found.")       
+       
+        
+38.student = {}
+entry = int(input("How many students? "))
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+user = input("Enter student name to search: ")
+if user in student :
+    print(f"{user}'s marks is {student[user]}")
+else:
+    print("Student not found.")
+
+39.student = {}
+entry = int(input("How many students? "))
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+user=input("Enter the name of the student whose marks should be updated:")
+if user in student:
+      new_mark=int(input("Enter ur new mark:"))
+      student[user]=new_mark
+      print("Marks updated successfully!")
+else: 
+      print("Student not found.")
+
+40.
+student = {}
+entry = int(input("How many students? "))
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+user=input("Enter the name of the student to delete:")
+if user in student:
+      del student[user]
+      print("Student deleted successfully!")
+else: 
+      print("Student not found.")
+print(student)
+
+
 
 
 
