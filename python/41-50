@@ -72,4 +72,42 @@ for stu in student:
     else:
        print(f"{stu}:{student[stu]}:Grade F")
 
+46.
+    def calculate_grade(mark):
+       if mark>=90:
+          return("A")
+       elif mark>=75:
+          return("B")
+       elif mark>=50:
+          return("C")
+       else:
+          return("F")
+student = {}
+entry = int(input("How many students? "))
+for stu in range(entry):
+    name = input("Enter name: ")
+    mark = int(input("Enter mark: "))
+    student[name] = mark
+for stu in student:
+    grade = calculate_grade(student[stu])
+    print(stu, ":", student[stu], ": Grade", grade)
+
+
+47.def highest_student(student):
+       for name, mark in sorted(student.items(), key=lambda x: x[1], reverse=True):
+          return name,mark
+   
+   student = {}
+   entry = int(input("How many students? "))
+   for stu in range(entry):
+     name = input("Enter name: ")
+     mark = int(input("Enter mark: "))
+     student[name] = mark
+  
+   top_name,top_mark=highest_student(student)
+   print(f"Top student:{top_name}\n mark:{top_mark}")
+
+    
+
+
 
