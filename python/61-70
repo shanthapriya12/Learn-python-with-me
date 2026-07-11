@@ -1,0 +1,95 @@
+61.def count_frequency(numbers):
+       num_dict={}
+       for no in numbers:
+          if no not in num_dict:
+                num_dict[no]=1
+          else: 
+                num_dict[no]+=1
+       return num_dict 
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_frequency(numbers)
+   
+
+62.def most_frequent(numbers):
+      num_dict={}
+      most_num=0
+      most_fre=0
+      for no in numbers:
+        if no not in num_dict:
+                num_dict[no]=1
+        else: 
+                num_dict[no]+=1
+      for number in num_dict:
+          if num_dict[number] >most_fre:
+             most_fre=num_dict[number]
+             most_num=number
+      return most_num,most_fre
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   most_num,most_fre=most_frequent(numbers)
+   print(f"Most frequent no with count: {most_num}:{most_fre}")
+
+63.def common_elements(list1, list2):
+    common = []
+    for no in list1:
+        if no in list2:
+            common.append(no)    
+    return common
+  list1 = []
+  list2 = []
+  entry1 = int(input("How many numbers in List 1? "))
+  for i in range(entry1):
+    num = int(input("Enter number: "))
+    list1.append(num)
+  entry2 = int(input("How many numbers in List 2? "))
+  for i in range(entry2):
+    num = int(input("Enter number: "))
+    list2.append(num)
+  result = common_elements(list1, list2)
+  print("Common elements:", result)
+
+64.def merge_lists(list1, list2):
+       list3=[]
+       for no in list1:
+           list3.append(no)
+       for no in list2:
+           list3.append(no)
+       return list3
+   list1 = []
+   list2 = []
+   entry1 = int(input("How many numbers in List 1? "))
+   for i in range(entry1):
+     num = int(input("Enter number: "))
+     list1.append(num)
+   entry2 = int(input("How many numbers in List 2? "))
+   for i in range(entry2):
+     num = int(input("Enter number: "))
+     list2.append(num)
+   result = merge_lists(list1, list2)
+   print("Merged list:", result)
+
+
+65.def reverse_list(numbers):
+      reverse=[]
+      for no in numbers:
+       reverse.insert(0, no)
+   return reverse
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   reverse=reverse_list(numbers)
+   print(f"Reversed list:{reverse}")
+
+
+
+
+
