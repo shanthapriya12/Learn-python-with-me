@@ -1,0 +1,155 @@
+51.def count_words(sentence):
+    return len(sentence)
+
+   user = input("Enter a sentence: ")
+   words = user.split()
+   total = count_words(words)
+   print(f"Number of words in the given sentence:{total}")   
+
+52.def longest_word(sentence):
+       long=""
+       for words in sentence:
+          if len( words )>len(long):
+             long=words
+       return long,len(long)
+   user = input("Enter a sentence: ")
+   words = user.split()
+   long,length= longest_word(words)
+   print(f"Longest word: {long}")
+   print(f"Length: {length}")   
+   
+53.def count_even_odd(numbers):
+    even = 0
+    odd = 0
+
+    for no in numbers:
+        if no % 2==0:
+            even += 1
+        else:
+            odd += 1
+
+    return even, odd
+numbers = []
+entry = int(input("How many numbers? "))
+for i in range(entry):
+    num = int(input("Enter number: "))
+    numbers.append(num)
+
+even, odd = count_even_odd(numbers)
+
+print(f"Even numbers: {even}")
+print(f"Odd numbers: {odd}")
+
+
+54.def largest_number(numbers):
+    long = numbers[0]
+    for no in numbers:
+        if no > long:
+            long = no
+    return long
+numbers = []
+entry = int(input("How many numbers? "))
+for i in range(entry):
+    num = int(input("Enter number: "))
+    numbers.append(num)
+long = largest_number(numbers)
+print(f"Largest number: {long}")
+
+
+55.def smallest_number(numbers):
+     small=numbers[0]
+     for no in numbers:
+       if no<small:
+          small=no
+     return small
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   small=smallest_number(numbers)
+   print(f"Smallest number:{small}")
+
+
+56.def sum_numbers(numbers):
+     sum=0
+     for no in numbers:
+         sum+=no
+     return sum
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   sum=sum_numbers(numbers)
+   print(f"Sum of number:{sum}")
+
+
+57.def average_numbers(numbers):
+      avg_mark=0
+      total=0
+      for no in numbers:
+          total+=no
+          avg_mark=total/len(numbers)
+      return avg_mark
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   avg_mark=average_numbers(numbers)
+   print(f"Average of the given numbers:{avg_mark}")
+
+58.def count_numbers(numbers):
+     positive=0
+     negative=0
+     zero=0 
+     for no in numbers:
+        if no>0:
+           positive+=1
+        elif no<0:
+           negative+=1
+        else:
+           zero+=1
+     return positive,negative,zero
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   positive,negative,zero=count_numbers(numbers)
+   print(f"Positive numbers: {positive}\nNegative numbers: {negative}\nZeroes: {zero}")
+   
+59.def second_largest(numbers):
+     long=0
+     sec_long=0
+     for no in numbers:
+         if no>long:
+            sec_long=long
+            long=no
+         elif sec_long<no<long:
+            sec_long=no
+     return sec_long
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   sec_long=second_largest(numbers)
+   print(f"Second largest number:{sec_long}")
+          
+60.def remove_duplicates(numbers):
+     unique=[]
+     for no in numbers:
+       if no not in unique:
+          unique.append(no)
+     return unique
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   result=remove_duplicates(numbers)
+   print(f"Without duplicate values:{result}")
+
+
