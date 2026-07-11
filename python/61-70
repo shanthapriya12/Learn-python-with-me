@@ -90,6 +90,88 @@
    print(f"Reversed list:{reverse}")
 
 
+66.def is_sorted(numbers):
+     for i in range(len(numbers)-1):
+        if numbers[i]>numbers[i+1]:
+            return False
+     return True
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   asc=is_sorted(numbers)
+   print(f"The List is sorted:{asc}")    
+
+67.def even_numbers(numbers):
+      even=[]
+      for no in numbers:
+          if no %2==0:
+             even.append(no)
+      return even 
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   even=even_numbers(numbers)
+   print(f"The list with only even numbers:{even}")  
+
+
+68.def count_even_odd(numbers):
+     even=0
+     odd=0
+     for no in numbers:
+        if no %2==0:
+           even+=1
+        else:
+           odd+=1
+     return even,odd
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   even,odd=count_even_odd(numbers)
+   print(f"Even numbers: {even}\nOdd numbers: {odd}")
+
+
+69.def square_numbers(numbers):
+       square=[]
+       squ=0
+       for no in numbers:
+          squ=no**2
+          square.append(squ)
+       return square
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   square=square_numbers(numbers)
+   print(f"The list which is squared:{square}")  
+
+70.def sum_even(numbers):
+       sum=0
+       for no in numbers:
+           if no % 2==0:
+              sum+=no
+       return sum
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   sum=sum_even(numbers)
+   print(f"The sum of even numbers:{sum}") 
+  
+
+
+
+
+
+
+
 
 
 
