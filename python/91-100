@@ -1,0 +1,162 @@
+91.def largest_negative(numbers):
+       large=None
+       for no in numbers:
+           if no<0:
+              if large is None or large<no:
+                 large=no
+       return large
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   large=largest_negative(numbers)
+   print(f"largest negative number in list :{large}")
+
+
+92.def count_divisible_by_10(numbers):
+       count=0
+       for no in numbers:
+           if no%10==0:
+              count+=1
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_divisible_by_10(numbers)
+   print(f"Numbers divisible by 10 :{count}")
+
+93.def count_divisible_by_7(numbers):
+       count=0
+       for no in numbers:
+           if no%7==0:
+              count+=1
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_divisible_by_7(numbers)
+   print(f"Numbers divisible by 7 :{count}")
+
+
+94.def first_multiple_of_5(numbers):
+       for no in numbers:
+           if no%5==0:
+              return no
+       return None
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   no=first_multiple_of_5(numbers)
+   print(f"First number multiple of 5 :{no}")
+
+95.def last_multiple_of_5(numbers):
+       last=None
+       for no in numbers:
+           if no%5==0:
+              last=no
+       return last
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   last=last_multiple_of_5(numbers)
+   print(f"The last multiple of 5:{last}")
+
+96.def absolute_values(numbers):
+       new_list=[]
+       for no in numbers:
+           if no>0:
+              new_list.append(no)
+           else:
+              new_list.append(no*(-1))
+       return new_list
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   new_list=absolute_values(numbers)
+   print(f"The updated list:{new_list}")
+
+97.def sum_positive(numbers):
+       sum=0
+       for no in numbers:
+           if no>0:
+              sum+=no
+       return sum
+   numbers=[]
+   entry=int(input("How many students ?"))
+   for i in range(entry):
+       num=int(input("Enter the number:"))
+       numbers.append(num)
+   sum=sum_positive(numbers)
+   print(f"Sum of positive numbers:{sum}")
+
+
+98.def average_positive(numbers):
+       sum=0
+       count=0
+       for no in numbers:
+           if no>0:
+              sum+=no
+              count+=1
+       
+       if count>0:
+          return sum/count
+       return None
+   numbers=[]
+   entry=int(input("How many students ?"))
+   for i in range(entry):
+       num=int(input("Enter the number:"))
+       numbers.append(num)
+   avg=average_positive(numbers)
+   print(f"Average of positive numbers:{avg}")
+
+
+99.def average_negative(numbers):
+       sum=0
+       count=0
+       for no in numbers:
+           if no<0:
+              sum+=no
+              count+=1
+       
+       if count>0:
+          return sum/count
+       return None
+   numbers=[]
+   entry=int(input("How many students ?"))
+   for i in range(entry):
+       num=int(input("Enter the number:"))
+       numbers.append(num)
+   avg=average_negative(numbers)
+   print(f"Average of negative numbers:{avg}")
+
+100.def count_positive_and_negative(numbers):
+        count_pos=0
+        count_neg=0
+        for no in numbers:
+           if no>0:
+              count_pos+=1
+           elif no<0:
+              count_neg+=1
+        return count_pos,count_neg
+   numbers=[]
+   entry=int(input("How many students ?"))
+   for i in range(entry):
+       num=int(input("Enter the number:"))
+       numbers.append(num)
+   count_pos,count_neg=count_positive_and_negative(numbers)
+   print(f"Count of positive number:{count_pos}\n Count of negative number:{count_neg}")
+
+
+
+
