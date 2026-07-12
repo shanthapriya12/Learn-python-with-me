@@ -1,0 +1,128 @@
+81.def double_numbers(numbers):
+       new_list=[]
+       mul_2=0
+       for no in numbers:
+          mul_2=no*2
+          new_list.append(mul_2)
+       return new_list
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   new_list=double_numbers(numbers)
+   print(f"The updated list :{new_list}") 
+
+
+82.def count_divisible_by_2_and_3(numbers):
+       count=0
+       for no in numbers:
+           if no%2==0 and no%3==0:
+              count+=1          
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_divisible_by_2_and_3(numbers)
+   print(f"Count of numbers divisible by 2 and 3:{count}")
+
+
+83.def first_positive(numbers):
+       for no in numbers:
+         if no>0:
+            return no
+       return None
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   no=first_positive(numbers)
+   print(f"The first positive number in the list:{no}")
+
+85.def last_positive(numbers):
+       last=None
+       for no in numbers:
+           if no>0:
+              last=no
+       return last
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   last=last_positive(numbers)
+   print(f"The last positive number in the list:{last}")
+
+86.def multiply_numbers(numbers):
+       mul=1
+       for no in numbers:
+           mul*=no
+       return mul
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   mul=multiply_numbers(numbers)
+   print(f"The multiplication value of all number in list:{mul}")
+
+
+87.def all_positive(numbers):
+       for no in numbers:
+           if no<0:
+              return False
+       return True
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   result=all_positive(numbers)
+   print(f"All the numbers in the list is positive :{result}")
+
+88.def all_even(numbers):
+       for no in numbers:
+           if no%2!=0:
+              return False
+       return True
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   result=all_even(numbers)
+   print(f"All the numbers in the list is even :{result}")
+
+89.def count_negative(numbers):
+       count=0      
+       for no in numbers:
+           if no<0:
+              count+=1
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_negative(numbers)
+   print(f"Count of negative number in list :{count}")
+
+
+90.def smallest_positive(numbers):
+       small=None
+        for no in numbers:
+         if no>0:
+           if small is None or small>no:
+              small=no
+       return small
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   small=smallest_positive(numbers)
+   print(f"The smallest positive number :{small}")
+
