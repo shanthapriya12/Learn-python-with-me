@@ -1,0 +1,150 @@
+71.def sum_odd(numbers):
+       sum=0
+       for no in numbers:
+           if no % 2!=0:
+              sum+=no
+       return sum
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   sum=sum_odd(numbers)
+   print(f"The sum of odd numbers:{sum}") 
+
+72.def count_greater_than_50(numbers):
+       count=0
+       for no in numbers:
+           if no >50:
+              count+=1
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_greater_than_50(numbers)
+   print(f"Count of number greater than 50:{count}") 
+
+73.def first_even(numbers):
+       even_num=0
+       for no in numbers:
+           if no %2==0:
+             return no
+       return None
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   even_num=first_even(numbers)
+   print(f"First even number:{even_num}") 
+
+74.def last_even(numbers):
+       last=None
+       for no in numbers:
+           if no%2==0:
+              last=no
+       return last 
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   last=last_even(numbers)
+   print(f"Last even number:{last}") 
+
+75.def count_multiples_of_5(numbers):
+       count=0
+       for no in numbers:
+           if no%5==0:
+              count+=1
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_multiples_of_5(numbers)
+   print(f"The count of multiples of 5:{count}")            
+
+
+76.def largest_even(numbers):
+       large_even=None
+       for no in numbers:
+           if no%2==0:
+            if large_even is None or no > large_even:
+              large_even=no
+       return large_even
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   large_even=largest_even(numbers)
+   print(f"The Largest even number:{large_even}")            
+
+
+77.def smallest_odd(numbers):
+       small_odd=None
+       for no in numbers:
+           if no % 2!=0:
+              if small_odd is None or no< small_odd:
+                 small_odd=no
+       return small_odd
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   small_odd=smallest_odd(numbers)
+   print(f"The smallest odd number:{small_odd}")             
+
+
+78.def count_between_10_and_50(numbers):
+       count=0
+       for no in numbers:
+           if no>=10 and no<=50:
+              count+=1
+       return count
+   numbers=[]
+   entry = int(input("How many numbers? ")) 
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count=count_between_10_and_50(numbers)
+   print(f"The count of numbers between 10 and 50 :{count}") 
+
+
+79.def replace_negative(numbers):
+    new_list = []
+    for no in numbers:
+        if no < 0:
+            new_list.append(0)
+        else:
+            new_list.append(no)
+    return new_list
+numbers = []
+entry = int(input("How many numbers? "))
+for i in range(entry):
+    num = int(input("Enter number: "))
+    numbers.append(num)
+new_list = replace_negative(numbers)
+print(f"The updated list replaced with zero: {new_list}")
+
+
+80.def replace_odd(numbers):
+    new_list = []
+    for no in numbers:
+        if no %2!=0:
+            new_list.append(0)
+        else:
+            new_list.append(no)
+    return new_list
+numbers = []
+entry = int(input("How many numbers? "))
+for i in range(entry):
+    num = int(input("Enter number: "))
+    numbers.append(num)
+new_list = replace_odd(numbers)
+print(f"The updated list replaced with zero: {new_list}")
