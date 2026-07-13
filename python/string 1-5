@@ -1,0 +1,55 @@
+1.def count_vowels(text):
+      count_vowel=0
+      for letter in text:
+         if letter in "aeiou" or letter in "AEIOU" :
+             count_vowel+=1
+      return count_vowel
+  text=input("Enter a string:")
+  count_vowel=count_vowels(text)
+  print(f"Count of vowels:{count_vowel}")
+
+2.def count_consonants(text):
+      count=0
+      alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+          if letter in alphabets and letter not in "aeiouAEIOU":
+               count+=1
+      return count
+  text=input("Enter a string:")
+  count=count_consonants(text)
+  print(f"Count of consonants:{count}")
+
+3.def count_digits(text):
+      count=0
+      num="1234567890"
+      alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+           if letter in num and letter not in alphabets:
+                     count+=1
+      return count
+  text=input("Enter a string:")
+  count=count_digits(text)
+  print(f"Count of digits:{count}")
+
+
+4.def count_spaces(text):
+      count=0
+      num="1234567890"
+      alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+           if letter not in num and letter not in alphabets and letter==" ":
+                     count+=1
+      return count
+  text=input("Enter a string:")
+  count=count_spaces(text)
+  print(f"Count of spaces:{count}")
+
+5.def reverse_string(text):
+      reverse=""
+      for letter in text:
+          reverse=letter+reverse
+      return reverse
+  text=input("Enter a string:")
+  reverse=reverse_string(text)
+  print(f"Reversed string:{reverse}")
+
