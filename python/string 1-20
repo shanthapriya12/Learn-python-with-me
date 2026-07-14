@@ -1,0 +1,276 @@
+1.def count_vowels(text):
+      count_vowel=0
+      for letter in text:
+         if letter in "aeiou" or letter in "AEIOU" :
+             count_vowel+=1
+      return count_vowel
+  text=input("Enter a string:")
+  count_vowel=count_vowels(text)
+  print(f"Count of vowels:{count_vowel}")
+
+2.def count_consonants(text):
+      count=0
+      alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+          if letter in alphabets and letter not in "aeiouAEIOU":
+               count+=1
+      return count
+  text=input("Enter a string:")
+  count=count_consonants(text)
+  print(f"Count of consonants:{count}")
+
+3.def count_digits(text):
+      count=0
+      num="1234567890"
+      alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+           if letter in num and letter not in alphabets:
+                     count+=1
+      return count
+  text=input("Enter a string:")
+  count=count_digits(text)
+  print(f"Count of digits:{count}")
+
+
+4.def count_spaces(text):
+      count=0
+      num="1234567890"
+      alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+           if letter not in num and letter not in alphabets and letter==" ":
+                     count+=1
+      return count
+  text=input("Enter a string:")
+  count=count_spaces(text)
+  print(f"Count of spaces:{count}")
+
+5.def reverse_string(text):
+      reverse=""
+      for letter in text:
+          reverse=letter+reverse
+      return reverse
+  text=input("Enter a string:")
+  reverse=reverse_string(text)
+  print(f"Reversed string:{reverse}")
+
+s6.def is_palindrome(text):
+      reverse=""
+      for letter in text:
+          reverse=letter+reverse
+      if reverse==text:
+         return True
+      else:  
+         return False
+  text=input("Enter a string:")
+  result=is_palindrome(text)
+  print(f"The string is palindrome:{result}")
+
+
+s7.def to_upper(text):
+      text2=""
+      text3=""
+      final=""
+      alphabets = "abcdefghijklmnopqrstuvwxyz"
+      for letter in text:
+        if letter in alphabets:
+           text2=(ord(letter))
+           text3=text2-32
+           final+=(chr(text3))
+        else:
+           final+=letter
+      return final
+  text=input("Enter a string:")
+  final=to_upper(text)
+  print(f"The string in upper:{final}")
+
+
+s8.def to_lower(text):
+      text2=""
+      text3=""
+      final=""
+      alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      for letter in text:
+        if letter in alphabets:
+           text2=(ord(letter))
+           text3=text2+32
+           final+=(chr(text3))
+        else:
+           final+=letter
+      return final
+  text=input("Enter a string:")
+  final=to_lower(text)
+  print(f"The string in lower:{final}")
+
+s9.def remove_spaces(text):
+      removed=""
+      for letter in text:
+        if letter!=" ":
+          removed+=letter
+      return removed
+  text=input("Enter a string:")
+  removed=remove_spaces(text)
+  print(f"The spaces in the string removed:{removed}")
+ 
+s10.def count_character(text, ch):
+       count=0
+       for letter in text:
+           if letter == ch:
+              count+=1
+       return count
+   text=input("Enter a string:")
+   ch=input("Enter a character:")
+   count=count_character(text,ch)
+   print(f"The number of times ch appear in the string:{count}")
+
+
+s11.def count_uppercase(text):
+       count=0
+       alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+       for letter in text:
+           if letter in alphabets:
+              count+=1
+       return count
+   text=input("Enter a string:")
+   count=count_uppercase(text)
+   print(f"The count of upper in the string:{count}")
+ 
+s12.def count_lowercase(text):
+       count=0
+       alphabets = "abcdefghijklmnopqrstuvwxyz"
+       for letter in text:
+           if letter in alphabets:
+              count+=1
+       return count
+   text=input("Enter a string:")
+   count=count_lowercase(text)
+   print(f"The count of lower in the string:{count}")
+ 
+      
+s13.def toggle_case(text):
+        letter1=""
+        letter2=""
+        final=""
+        lowercase="abcdefghijklmnopqrstuvwxyz"
+        uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for letter in text:
+            if letter in lowercase:
+               letter1=ord(letter)
+               letter2=letter1-32
+               final+=chr(letter2)
+            elif letter in uppercase:
+               letter1=ord(letter)
+               letter2=letter1+32
+               final+=chr(letter2)
+            else:
+               final+=letter
+        return final
+    text=input("Enter a string:")
+    final=toggle_case(text)
+    print(f"The toggled string is:{final}")
+ 
+s14.def remove_digits(text):
+        digit="1234567890"
+        final=""
+        for letter in text:
+            if letter not in digit:
+               final+=letter
+        return final
+    text=input("Enter a string:")
+    final=remove_digits(text)
+    print(f"The updated string is:{final}")
+
+
+s15.def count_special(text): 
+        digit="1234567890"
+        alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        count=0
+        for letter in text:
+            if letter not in alphabets and letter not in digit and letter!=" ":
+               count+=1
+        return count
+    text=input("Enter a string:")
+    count=count_special(text)
+    print(f"The count of special character in a string:{count}")
+
+s16.def first_digit(text):
+        digit="0123456789"
+        for letter in text:
+            if letter in digit:
+                return letter
+        return None
+    text=input("Enter a string:")
+    result=first_digit(text)
+    print(f"The first_digit in the string:{result}")
+
+s17.def last_digit(text):
+        digit="0123456789"
+        last=None
+        for letter in text:
+            if letter in digit:
+                last= letter
+        return last
+    text=input("Enter a string:")
+    result=last_digit(text)
+    print(f"The last_digit in the string:{result}")
+
+ s18.def remove_vowels(text):
+         vowel="aeiouAEIOU"
+         final=""
+         for letter in text:
+             if letter not in vowel:
+                final+=letter
+         return final
+     text=input("Enter a string:")
+     final=remove_vowels(text)
+     print(f"The updated string:{final}")
+
+
+s19.def count_words(text):
+        count=0
+        for i in range(len(text)):
+            if text[i]!=" " and( i == 0 or text[i-1]==" "):
+               count+=1
+        return count
+    text=input("Enter a string:")
+    count=count_words(text)
+    print(f"The count of words in a string:{count}")
+
+s20.def longest_word(text):
+    current_word = ""
+    longest = ""
+    for letter in text:
+        if letter != " ":
+            current_word+=letter
+        else:
+            if len(current_word) > len(longest):
+                longest = current_word
+            current_word = ""
+    if len(current_word) > len(longest):
+        longest = current_word
+    return longest
+
+text = input("Enter a string: ")
+result = longest_word(text)
+print(f"The longest word is: {result}")
+
+
+s20.def shortest_word(text):
+    current_word = ""
+    shortest = None
+    for letter in text:
+        if letter != " ":
+            current_word+=letter
+        else:
+            if shortest is None or len(current_word) < len(shortest)  :
+                shortest = current_word
+            current_word = ""
+    if shortest is None or len(current_word) < len(shortest) :
+        shortest = current_word
+    return shortest
+
+text = input("Enter a string: ")
+result = shortest_word(text)
+print(f"The shortest word is: {result}")
+
+
+
