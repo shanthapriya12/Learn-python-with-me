@@ -272,5 +272,91 @@ text = input("Enter a string: ")
 result = shortest_word(text)
 print(f"The shortest word is: {result}")
 
+s21.def shortest_word(text):
+    current_word = ""
+    shortest = None
+    for letter in text:
+        if letter != " ":
+            current_word+=letter
+        else:
+            if shortest is None or len(current_word) < len(shortest)  :
+                shortest = current_word
+            current_word = ""
+    if shortest is None or len(current_word) < len(shortest) :
+        shortest = current_word
+    return shortest
+
+text = input("Enter a string: ")
+result = shortest_word(text)
+print(f"The shortest word is: {result}")
+
+
+s22.def reverse_each_word(text):
+    current_word = ""
+    final = ""
+
+    for letter in text:
+        if letter != " ":
+            current_word += letter
+        else:
+            reverse_word = ""
+            for ch in current_word:
+                reverse_word = ch + reverse_word
+            final += reverse_word + " "
+            current_word = ""
+
+    reverse_word = ""
+    for ch in current_word:
+        reverse_word = ch + reverse_word
+    final += reverse_word
+
+    return final
+
+text = input("Enter a string: ")
+result = reverse_each_word(text)
+print("The reversed string is:", result)
+
+
+s23.def capitalize_words(text):
+        letter1=""
+        letter2=""
+        final=""
+        for i in range(len(text)):
+          if text[i]  in "abcdefghijklmnopqrstuvwxyz" and (i == 0 or text[i-1] == " "):      
+            letter1=ord(text[i])
+            letter2=letter1-32
+            final+=chr(letter2)
+          else:
+            final+=text[i]
+        return final
+text=input("Enter a string:")
+final=capitalize_words(text)
+print(f"The capitalized sentence:{final}")
+            
+s24.def count_words_starting_with_vowel(text):
+        count=0               
+        for i in range(len(text)):
+            if text[i]!=" " and( i == 0 or text[i-1]==" ") and text[i] in "aeiouAEIOU":
+               count+=1
+        return count
+text=input("Enter a string:")
+count=count_words_starting_with_vowel(text)
+print(f"The count of words starting with vowels in a string:{count}")
+
+
+
+s25.def count_words_starting_with_consonant(text):
+        count=0         
+        alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"      
+        for i in range(len(text)):
+            if text[i]!=" " and( i == 0 or text[i-1]==" ") and text[i] not in "aeiouAEIOU" and text[i] in alphabets:
+               count+=1
+        return count
+text=input("Enter a string:")
+count=count_words_starting_with_consonant(text)
+print(f"The count of words starting with consonant in a string:{count}")
+
+
+
 
 
