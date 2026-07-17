@@ -356,6 +356,76 @@ text=input("Enter a string:")
 count=count_words_starting_with_consonant(text)
 print(f"The count of words starting with consonant in a string:{count}")
 
+s26.def count_words_ending_with_vowel(text):
+        count=0
+        for i in range(len(text)):
+            if text[i]!=" " and text[i] in "aeiouAEIOU" and(i == len(text) - 1 or text[i+1]==" ") :
+               count+=1
+        return count
+text=input("Enter a string:")
+count=count_words_ending_with_vowel(text)
+print(f"The count of words ending with vowel in a string:{count}")
+
+
+s27.def count_words_ending_with_consonant(text):
+        count=0
+        alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+        for i in range(len(text)):
+            if text[i]!=" " and text[i] not in "aeiouAEIOU" and text[i] in alphabets and(i == len(text) - 1 or text[i+1]==" ") :
+              count+=1
+        return count
+text=input("Enter a string:")
+count=count_words_ending_with_consonant(text)
+print(f"The count of words ending with consonant in a string:{count}")
+
+
+s28.def first_word(text):
+        first_word=""
+        for i in range(len(text)):
+            if text[i]!=" ":
+                first_word+=text[i] 
+            else:
+                break
+
+        return first_word
+text=input("Enter a string:")
+first_word=first_word(text)
+print(f"The first word of the string :{first_word}")
+
+
+s29.def last_word(text):
+        last=""
+        current_word=""
+        for letter in text:
+            if letter != " ":
+               current_word += letter
+
+            else:
+               last = current_word
+               current_word = ""
+
+        if current_word != "":
+           last = current_word
+            
+        return last
+text=input("Enter a string:")
+last=last_word(text)
+print(f"The last word of the string :{last}")
+
+s30.def replace_spaces(text):
+        replace=""
+        for letter in text:
+            if letter!= " ":
+               replace+=letter
+
+            else :
+               replace+="-"
+        return replace
+text=input("Enter a string:")
+replace=replace_spaces(text)
+print(f"The updated string :{replace}")
+
+
 
 
 
