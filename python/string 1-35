@@ -425,6 +425,79 @@ text=input("Enter a string:")
 replace=replace_spaces(text)
 print(f"The updated string :{replace}")
 
+s31.def replace_vowels(text):
+        vowel="aeiouAEIOU"
+        final=""
+        for letter in text:
+            if letter in vowel:
+               final+="*"
+            else:
+               final+=letter
+        return final
+text=input("Enter a string:")
+final=replace_vowels(text)
+print(f"The updated string :{final}")
+
+s32.def replace_extra_space(text):
+        replace=""
+        for i in range(len(text)):
+            if i>0 and text[i]==" " and text[i-1]==" " :
+                continue
+            else:
+               replace+=text[i]
+        return replace
+text=input("Enter a string:")
+replace=replace_extra_space(text)
+print(f"The updated string :{replace}")
+                  
+s33.def is_anagram(text1, text2):
+      if len(text1) != len(text2):
+        return False
+      for letter in text1:
+        count1 = 0
+        count2 = 0
+        for ch in text1:
+          if ch == letter:
+            count1 += 1
+        for ch in text2:
+          if ch == letter:
+            count2 += 1
+        if count1 != count2:
+           return False
+      return True
+text1=input("Enter a string1:")
+text2=input("Enter a string2:")
+result=is_anagram(text1,text2)
+print(f"The two strings are anagram:{result}")
+
+s34.def character_frequency(text):
+       printed=""
+       for letter in text:
+          count=0
+          if letter in printed:
+               continue
+          for ch in text:
+                if letter==ch:
+                      count+=1
+          print(letter,":",count)
+          printed+=letter
+
+text=input("Enter a string:")
+result=character_frequency(text)
+print(f"Character frequency:{result}")
+
+
+s35.def rotation(text1,text2):
+      if len(text1) == len(text2) and text2 in (text1 + text1):
+           return True
+      return False      
+text1=input("Enter a string1:")
+text2=input("Enter a string2:")
+result=rotation(text1,text2)
+print(f"Character rotation:{result}")
+
+              
+
 
 
 
