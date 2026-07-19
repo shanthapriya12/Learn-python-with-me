@@ -1,0 +1,155 @@
+l1.def sum_of_list(numbers):
+       total=0
+       for no in numbers:              
+         total+=no
+       return total
+numbers=[]
+entry = int(input("How many numbers to append: "))
+for no in range(entry):
+    num=int(input("Enter numbers:"))
+    numbers.append(num)
+total=sum_of_list(numbers)
+print(f"Sum of numbers in list:{total}")
+
+l2.def largest_element(numbers):
+       large=numbers[0]
+       for no in numbers:
+           if no>large:
+              large=no
+       return large
+numbers=[]
+entry=int(input("How many numbers to append: "))
+for no in range(entry):
+    num=int(input("Enter numbers:"))
+    numbers.append(num)
+large=largest_element(numbers)
+print(f"Largest element in the list:{large}")
+
+l3.def smallest_element(numbers):
+       small=numbers[0]
+       for no in numbers:
+           if no<small:
+              small=no
+       return small
+numbers=[]
+entry=int(input("How many numbers to append: "))
+for no in range(entry):
+    num=int(input("Enter numbers:"))
+    numbers.append(num)
+small=smallest_element(numbers)
+print(f"Smallest element in the list:{small}")
+
+
+l4.def second_largest(numbers):
+     long=numbers[0]
+     sec_long=numbers[0]
+     for no in numbers:
+         if no>long:
+            sec_long=long
+            long=no
+         elif sec_long<no<long:
+            sec_long=no
+     return sec_long
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   sec_long=second_largest(numbers)
+   print(f"Second largest number:{sec_long}")
+
+l5.def second_smallest(numbers):
+     small=numbers[0]
+     sec_small=numbers[0]
+     for no in numbers:
+         if no<small:
+            sec_small=small
+            small=no
+         elif sec_small>no>small:
+            sec_small=no
+     return sec_small
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   sec_small=second_smallest(numbers)
+   print(f"Second smallest number:{sec_small}")
+
+l6.def count_even_odd(numbers):
+       count_even=0
+       count_odd=0
+       for no in numbers:
+           if no%2==0:
+              count_even+=1
+           elif no%2!=0:
+              count_odd+=1
+       return count_even,count_odd
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   count_even,count_odd=count_even_odd(numbers)
+   print(f"Count of even number in the list:{count_even}\n Count of odd number in the list:{count_odd}")
+
+l7.def reverse_list(numbers):
+       reverse=[]
+       for i in range(len(numbers) - 1, -1, -1):
+           reverse.append(numbers[i])
+       return reverse
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   reverse=reverse_list(numbers)
+   print(f"Reversed list:{reverse}")
+
+l8.def is_sorted(numbers):
+       for i in range(len(numbers) - 1):
+           if numbers[i]>numbers[i+1]:
+              return False
+       return True
+   numbers=[]
+   entry = int(input("How many numbers? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+   result=is_sorted(numbers)
+   print(f"The list is sorted:{result}")
+ 
+l9.def merge_lists(list1, list2):  
+       final=[]
+       for no in list1:
+           final.append(no)
+       for no in list2:
+           final.append(no)
+       return final
+   list1=[]
+   list2=[]
+   entry = int(input("How many numbers in list1? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     list1.append(num)
+   entry = int(input("How many numbers in list2? "))
+   for i in range(entry):
+     num = int(input("Enter number: "))
+     list2.append(num)
+   final=merge_lists(list1,list2)
+   print(f"The merged list is:{final}")      
+       
+l10.def remove_duplicates(numbers):
+        unique=[]
+        for no in numbers:
+            if no not in unique:
+                unique.append(no)
+        return unique    
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+    unique=remove_duplicates(numbers)
+    print(f"The updated list:{unique}")
+
