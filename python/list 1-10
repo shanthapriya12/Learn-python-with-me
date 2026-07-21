@@ -153,3 +153,90 @@ l10.def remove_duplicates(numbers):
     unique=remove_duplicates(numbers)
     print(f"The updated list:{unique}")
 
+l11.def common_elements(list1, list2):
+        common=[]
+        for no in list1:
+            if no in list2 and no not in common:
+               common.append(no)
+        return common
+    list1=[]
+    list2=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      list1.append(num)
+    entry = int(input("How many numbers in list2? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      list2.append(num)
+    common=common_elements(list1,list2)
+    print(f"Common elements in list1 and list2 :{common}")
+             
+
+l12.def find_missing(numbers):
+        expected=1
+        num=0
+        for expected in range(1,len(numbers)+2):
+               if expected not in numbers:
+                  return expected
+        return numbers
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+     num = int(input("Enter number: "))
+     numbers.append(num)
+    result=find_missing(numbers)
+    print(f"The missing number in the list:{result}")
+
+l13.def count_occurrences(numbers, target):
+        count=0
+        for no in numbers:
+            if no ==target:
+               count+=1
+        return count
+    numbers=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    target = int(input("How many number to target? "))
+    count=count_occurrences(numbers,target)
+    print(f"Count of occurences of {target}:{count}")
+
+l14.def rotate_right(numbers):
+        rotate_right=[]
+        rotate_right.append(numbers[-1])
+        if numbers[-1] in rotate_right:
+            for no in range(len(numbers) - 1):
+                rotate_right.append(numbers[no])
+        return rotate_right
+
+    numbers=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    rotate_right=rotate_right(numbers)
+    print(f"The updated list:{rotate_right}") 
+
+l15.def lists_equal(list1, list2):
+          if len(list1)!=len(list2):
+             return False
+          for i in range(len(list1)):
+              if list1[i]!=list2[i]:
+               return False
+          return True
+    list1=[]
+    list2=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      list1.append(num)
+    entry = int(input("How many numbers in list2? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      list2.append(num)
+    final=lists_equal(list1,list2)
+    print(f"The lists are same:{final}") 
+               
+
