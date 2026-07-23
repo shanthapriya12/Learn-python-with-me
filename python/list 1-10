@@ -238,5 +238,73 @@ l15.def lists_equal(list1, list2):
       list2.append(num)
     final=lists_equal(list1,list2)
     print(f"The lists are same:{final}") 
+
+l16.def is_palindrome_list(numbers):
+        for i in range(len(numbers)//2):
+            if numbers[i]!=numbers[-(i+1)]:
+               return False
+        return True
+    numbers=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    result=is_palindrome_list(numbers)
+    print(f"The list is palindrome:{result}")
+
+l17.def find_index(numbers, target):
+      for i in range(len(numbers)):
+          if numbers[i]==target:
+             return i
+      return -1
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    target=int(input("Enter the target value:"))
+    result=find_index(numbers,target)
+    print(f"The target numbers's index:{result}") 
+           
+l18.def insert_at_position(numbers, value, position):
+    new_list = []
+
+    for i in range(len(numbers) + 1):
+        if i == position:
+            new_list.append(value)
+        if i < len(numbers):
+            new_list.append(numbers[i])
+
+    return new_list
+print(insert_at_position(numbers, value, position))
+
+
+l19.def delete_at_position(numbers, position):
+    new_list = []
+
+    for i in range(len(numbers)):
+        if i != position:
+            new_list.append(numbers[i])
+
+    return new_list
+print(delete_at_position(numbers, position))
+
+
+l20.def max_difference(numbers):
+    max_diff = 0
+
+    for i in range(len(numbers) - 1):
+        diff = numbers[i] - numbers[i + 1]
+
+        if diff < 0:
+            diff = -diff
+
+        if diff > max_diff:
+            max_diff = diff
+
+    return max_diff
+print(max_difference(numbers))
+
+
                
 
