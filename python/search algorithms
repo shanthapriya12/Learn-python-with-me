@@ -1,0 +1,45 @@
+sa1.def linear_search(numbers, target):
+        for no in numbers:
+            if no==target:
+                return True
+        return False
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    target=int(input("Enter the target value:"))
+    result=linear_search(numbers, target)
+    print(f"The target is in list:{result}")
+
+sa2.def bubble_sort(numbers):
+        for i in range(len(numbers)):
+          for i in range(len(numbers)-1):
+            if numbers[i] > numbers[i+1]:
+               numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
+        return numbers
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    numbers=bubble_sort(numbers)
+    print(f"Bubble sorted list:{numbers}")
+
+
+sa3.def selection_sort(numbers):
+        for i in range(len(numbers)):
+            smallest=i
+            for j in range(i + 1, len(numbers)):
+                if numbers[j] < numbers[smallest]:
+                  smallest = j
+            numbers[i], numbers[smallest] = numbers[smallest],numbers[i]
+        return numbers
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    numbers=selection_sort(numbers)
+    print(f"Selection sorted list:{numbers}")
+
