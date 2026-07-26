@@ -43,3 +43,215 @@ sa3.def selection_sort(numbers):
     numbers=selection_sort(numbers)
     print(f"Selection sorted list:{numbers}")
 
+sa4.def binary_search(numbers, target):
+       low = 0
+       high = len(numbers)-1
+       
+       while low <= high:
+          mid=(low+high)//2
+            if numbers[mid]==target:
+               return mid
+            elif numbers[mid]>target:
+               high = mid - 1
+            elif numbers[mid]<target:
+               low=mid+1
+        return -1
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    target=int(input("Enter the target value:"))
+    value=binary_search(numbers, target)
+    print(f"The index of the target:{value}")
+
+
+sa5.def second_largest(numbers):
+        largest = numbers[0]
+        second = numbers[1]
+        for no in numbers:
+            if no>largest:
+               second = largest
+               largest = no
+               
+            if largest>no>second:
+               second=no
+        return largest , second
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    largest,second=second_largest(numbers)
+    print(f"The largest number in the list:{largest}\nThe second largest number in the list:{second}")
+
+
+sa6.def insertion_sort(numbers):
+     for i in range(1,len(numbers)):
+        key = numbers[i]
+        j = i - 1
+        while j >= 0 and numbers[j] > key:
+           numbers[j + 1] = numbers[j]
+           j -= 1
+        numbers[j + 1] = key    
+      return numbers
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    result=insertion_sort(numbers)
+    print("The updated list using insertion sort:{result}")
+
+sa7.def reverse_string(text):
+        reverse=""
+        for letter in text:
+           reverse=letter+reverse
+        return reverse
+    text=input("Enter the string:")
+    result=reverse_string(text)
+    print(f"The updated list :{result}")
+
+sa8.def count_vowels(text):
+       vowels="aeiouAEIOU"
+       count=0
+       for letter in text: 
+           if letter in vowels:
+              count+=1
+       return count
+    text=input("Enter the string:")
+    count=count_vowels(text)
+    print(f"No of vowels in the string :{count}")
+
+
+sa9.def character_frequency(text, ch):
+       count=0
+       for letter in text:
+           if letter==ch:
+              count+=1
+       return count
+   text=input("Enter a string:")
+   ch=input("Enter a character:")
+   count=character_frequency(text,ch)
+   print(f"The number of times ch appear in the string:{count}")
+
+sa10.def is_anagram(text1, text2):
+      if len(text1) != len(text2):
+        return False
+      for letter in text1:
+        count1 = 0
+        count2 = 0
+        for ch in text1:
+          if ch == letter:
+            count1 += 1
+        for ch in text2:
+          if ch == letter:
+            count2 += 1
+        if count1 != count2:
+           return False
+      return True
+text1=input("Enter a string1:")
+text2=input("Enter a string2:")
+result=is_anagram(text1,text2)
+print(f"The two strings are anagram:{result}")
+
+
+s11.def remove_duplicates(numbers):
+        new=[]
+        for no in numbers:
+            if no not in new:
+               new.append(no)
+        return new
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    new=remove_duplicates(numbers)
+    print("The updated list without duplicates:{new}")
+
+s12.def merge_sorted_lists(list1, list2):
+        updated=[]
+        i=0
+        j=0
+        while i<len(list1) and j<len(list2):
+        if list1[i] <= list2[j]:
+            updated.append(list1[i])
+            i += 1
+        else:
+            updated.append(list2[j])
+            j += 1
+
+        while i < len(list1):
+            updated.append(list1[i])
+            i += 1
+
+        while j < len(list2):
+            updated.append(list2[j])
+            j += 1   
+               
+        return updated
+    list1=[]
+    list2=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      list1.append(num)
+    entry = int(input("How many numbers in list2? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      list2.append(num)
+    updated=merge_sorted_lists(list1,list2)
+    print(f"The merged list of already sorted one's:{updated}") 
+               
+
+sa13.def word_frequency(text):
+         words = text.split()
+         frequency = {}
+
+         for word in words:
+           if word in frequency:
+            frequency[word] += 1
+           else:
+            frequency[word] = 1
+
+         return frequency
+
+
+     text = input("Enter a sentence: ")
+     result = word_frequency(text)
+
+     print("Word Frequency:")
+     for word, count in result.items():
+        print(word, ":", count) 
+     
+sa14.def find_missing(numbers, n):
+       for i in range(1, n + 1):
+           if i not in numbers:
+              return i
+    numbers=[]
+    entry = int(input("How many numbers? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    n=len(numbers)+1
+    i=find_missing(numbers,n)
+    print(f"The n of the list:{n}\n The missing number:{i}")
+
+sa15.def rotate_right(numbers):
+        rotate_right=[]
+        rotate_right.append(numbers[-1])
+        if numbers[-1] in rotate_right:
+            for no in range(len(numbers) - 1):
+                rotate_right.append(numbers[no])
+        return rotate_right
+
+    numbers=[]
+    entry = int(input("How many numbers in list1? "))
+    for i in range(entry):
+      num = int(input("Enter number: "))
+      numbers.append(num)
+    rotate_right=rotate_right(numbers)
+    print(f"The updated list:{rotate_right}") 
+
+
