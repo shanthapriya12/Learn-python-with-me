@@ -1,0 +1,44 @@
+
+o1.class Car:
+    pass
+
+car1 = Car()
+car2 = Car()
+car3 = Car()
+
+print("Three car objects created successfully!")
+
+o2.class Student:
+     def __init__(self,name,age):
+         self.name=name
+         self.age=age
+student1 = Student("Sweety", 19)
+print(student1.name,student1.age)
+                
+o3.class Student:
+     def __init__(self,name,age):
+         self.name=name
+         self.age=age
+     def display(self):
+         print(self.name)
+         print(self.age)
+student1 = Student("Sweety", 19)
+student1.display()
+
+o4.class Calculator:
+    def add(self,a,b):
+        c=a+b
+        print(c)
+calc=Calculator()
+calc.add(10,20)
+
+o5.class Rectangle:  
+      def __init__(self, length, width):
+         self.length=length
+         self.width=width
+      def area(self):
+         return self.length * self.width
+rect = Rectangle(10, 5)
+result = rect.area()
+print(f"Area = {result}")
+
