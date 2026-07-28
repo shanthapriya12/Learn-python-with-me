@@ -1,0 +1,38 @@
+f1.
+   with open("message.txt","w")as file:
+       file.write("Hello Sweety!\nWelcome to Python File Handling.")
+
+f2.message.txt
+   Hello Sweety!
+   Welcome to Python File Handling.
+
+   with open("message.txt","r")as file:
+      data=file.read()
+      print(data)
+
+f3.message.txt
+   Hello Sweety!
+   Welcome to Python File Handling.
+
+   with open("message.txt","a")as file:
+        file.write("Keep practicing Python every day!")
+        print(data)
+
+f4.message.txt
+    Hello Sweety!
+    Welcome to Python File Handling.
+    Keep practicing Python every day!
+    with open("message.txt","r")as file:
+        list1=file.readline()
+    print(list1)
+
+
+f5.message.txt
+    Hello Sweety!
+    Welcome to Python File Handling.
+    Keep practicing Python every day!
+    with open("message.txt","r")as file:
+        lines=file.readlines()
+    print(lines)
+
+
