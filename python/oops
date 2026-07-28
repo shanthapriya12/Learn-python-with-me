@@ -42,3 +42,35 @@ rect = Rectangle(10, 5)
 result = rect.area()
 print(f"Area = {result}")
 
+
+o6.class BankAccount:
+     def __init__(self):
+        self.__balance = 1000
+     def deposit(self, amount):
+        self.__balance += amount
+     def show_balance(self):
+        print(f"Balance: {self.__balance}")
+account = BankAccount()
+account.deposit(500)
+account.show_balance()
+
+o7.class Person:
+     def __init__(self, name):
+         self.name=name
+     def introduce(self):
+         print(f"My name is {self.name}")
+  class Student(Person):
+    pass
+student1 = Student("Sweety")
+student1.introduce()
+
+o8.class Animal:
+     def speak(self):
+         print("Animal makes a sound")
+   class Dog(Animal):
+     def speak(self):
+         print("Dog barks")
+dog = Dog()
+dog.speak()
+
+
