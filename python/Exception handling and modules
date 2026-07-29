@@ -1,0 +1,84 @@
+
+e1.
+     a=int(input("Enter the value of the first number:"))
+     b=int(input("Enter the value of the second number:"))
+   try:
+     c=a/b
+     print(c)
+   except:
+     print("Cannot divide by zero!")
+ 
+e2.
+   a=int(input("Enter the value of the first number:"))
+   b=int(input("Enter the value of the second number:"))
+   try:
+     c=a/b
+     print(c)
+   except ZeroDivisionError:
+     print("Cannot divide by zero!")
+
+e3.try:
+     a=int(input("Enter the value of the first number:"))
+     b=int(input("Enter the value of the second number:"))
+     c=a/b
+     print(c)
+   except ZeroDivisionError:
+     print("Cannot divide by zero!")
+   except ValueError:
+     print("Please enter valid numbers!")
+
+e4.try:
+     a=int(input("Enter the value of the first number:"))
+     b=int(input("Enter the value of the second number:"))
+     c=a/b
+     print(c)
+   except ValueError:
+     print("Please enter valid numbers!")
+   except ZeroDivisionError:
+     print("Cannot divide by zero!")
+   else:
+     print(f"Division successful!\nResult:{c}")
+
+e5.try:
+     a=int(input("Enter the value of the first number:"))
+     b=int(input("Enter the value of the second number:"))
+     c=a/b
+     print(c)
+   except ValueError:
+     print("Please enter valid numbers!")
+   except ZeroDivisionError:
+     print("Cannot divide by zero!")
+   else:
+     print(f"Division successful!\nResult:{c}")
+   finally:
+     print("Program finished.")
+
+e6.age=int(input("Enter your age:"))
+   if age<0:
+      raise ValueError("Age cannot be negative")
+   else:
+      print("Age accepted.")
+
+m1.import math
+   user=int(input("Enter the value of the number:"))
+   result=math.sqrt(user)
+   print(f"Square rooted value:{result}")
+
+
+m2.from math import factorial
+   user=int(input("Enter the value for the number:"))
+   result=factorial(user)
+   print(f"Factorial number:{result}")
+
+m3.from random import randint
+   number = randint(1, 100)
+   print(f"Random number: {number}")
+       
+m4.from random import choice
+   fruits = ["Apple", "Banana", "Mango", "Orange"]
+   print(f"Selected fruit: {choice(fruits)}")
+
+m5.from datetime import datetime
+   current = datetime.now()
+   print(f"Current Date & Time: {current}\nCurrent Date: {current.date()}\nCurrent Time: {current.time()}")
+
