@@ -1,0 +1,104 @@
+re1.import re
+    text = input("Enter a sentence:")
+    if re.search("Python", text):
+       print("Python found!")
+    else:
+       print("Python not found!")
+
+re2.import re
+    text = input("Enter a sentence:")
+    if re.search("Python", text, re.IGNORECASE):
+         print("Python found!")
+    else:
+         print("Python not found!")
+
+re3.import re 
+    text=input("Enter a sentence:")
+    if re.match("Hello",text):
+       print("Sentence starts with Hello.")
+    else:
+       print("Sentence does not start with Hello.")
+
+re4.import re 
+    text=input("Enter a sentence:")
+    result = re.findall("cat", text)
+    if result:
+       print(f"Matches:{result}")
+       print(f"Total matches:{len(result)}")
+    else:
+       print("Not found")
+
+re5.import re
+    text = input("Enter a sentence:")
+    result= re.sub("Python", "Java", text)
+    print(f"Updated string:{result}")    
+    
+
+re6.import re
+    text=input("Enter a sentence:")
+    result = re.findall(r"\d", text)
+    print(f"Digits: {result}\nTotal digits:{len(result)}")
+
+re7.import re
+    text=input("Enter a sentence:")
+    result = re.findall(r"\D", text)
+    print(f"Non-digits: {result}\nTotal non-digits: {len(result)}")
+
+re8.import re
+    text=input("Enter a sentence:")
+    result = re.findall(r"\w", text)
+    print(f"Word characters:  {result}\nTotal word characters: {len(result)}")
+
+
+re9.import re
+    text=input("Enter a sentence:")
+    result = re.findall(r"\W", text)
+    print(f"Non-word characters: {result}\nTotal non-word characters: {len(result)}")
+
+re10.import re
+    text=input("Enter a sentence:")
+    result = re.findall(r"\s", text)
+    print(f"Whitespace characters: {result}\nTotal whitespace characters: {len(result)}")
+
+re11.import re
+    text=input("Enter a sentence:")
+    result = re.findall(r"\S", text)
+    print(f"Non-whitespace characters:{result}\nTotal non-whitespace characters: {len(result)}")
+
+re12.import re
+     text =input("Enter a sentence:")
+     if re.search(r"^Hello", text):
+        print("Sentence starts with Hello.")
+     else:
+        print("Sentence does not start with Hello.")
+
+re13.import re
+     text =input("Enter a sentence:")
+     if re.search(r"Python$", text):
+        print("Sentence ends with Python.")
+     else:
+        print("Sentence does not end with Python.")
+
+re14.import re
+     email=input("Enter your email:")
+     if re.search(r"^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]+$", email):
+        print("Valid Email")
+     else:
+        print("Invalid Email")
+
+re15.import re
+     user=input("Enter your phone number:")
+     if re.search(r"^\d{10}$", user):
+        print("Valid Phone Number")
+     else:
+        print("Invalid Phone Number")
+
+re16.import re
+     password=input("Enter your password:")
+     if re.search(r"^[a-zA-Z0-9_]{8,}$", password):
+        print("Valid Password")
+     else:
+        print("Invalid Password")
+
+
+
