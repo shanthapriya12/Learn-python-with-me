@@ -1,0 +1,88 @@
+sq1.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("""
+    CREATE TABLE students(
+    id INTEGER,
+    name TEXT
+    )
+    """)
+    clg.commit()
+    clg.close()
+
+sq2.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("""
+    INSERT INTO students VALUES
+    (101,"Sweety")""")
+    clg.commit()
+    clg.close()
+
+
+sq3.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("""
+    INSERT INTO students VALUES
+    (101,"Sweety"),(102,"Priya")""")
+    clg.commit()
+    clg.close()
+
+sq4.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("SELECT * FROM students")
+    data=cursor.fetchall()
+    print(data)
+    clg.close()
+
+sq5.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("SELECT * FROM students")
+    data=cursor.fetchall()
+    for id, name in data:
+       print(f"ID: {id}")
+       print(f"Name: {name}")
+    clg.close()
+
+
+sq6.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("""
+    SELECT * FROM students
+    WHERE id = 102
+    """)
+    data=cursor.fetchall()
+    for id, name in data:
+       print(f"ID: {id}")
+       print(f"Name: {name}")
+    clg.close()
+
+sq7.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("""
+    UPDATE students
+    SET name = "Shantha Priya"
+    WHERE id = 101
+    """)
+    clg.commit()
+    for id, name in data:
+       print(f"ID: {id}")
+       print(f"Name: {name}")
+    clg.close()
+
+sq8.import sqlite3
+    clg=sqlite3.connect("college.db")
+    cursor=clg.cursor()
+    cursor.execute("""
+    DELETE FROM students
+    WHERE id = 102
+    """)
+    clg.commit()
+    clg.close()
+
+
