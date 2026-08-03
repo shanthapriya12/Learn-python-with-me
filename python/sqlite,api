@@ -85,4 +85,25 @@ sq8.import sqlite3
     clg.commit()
     clg.close()
 
+api1.import requests
+     response=requests.get("https://api.github.com")
+     print(response.status_code)
+
+api2.import requests
+     response = requests.get("https://api.github.com")
+     data = response.json()
+     print(data)
+
+api3.import requests
+     response = requests.get("https://api.github.com")
+     data=response.json()
+     print(data["current_user_url"])
+
+api4.import requests
+     response = requests.get("https://api.github.com")
+     data=response.json()
+     print(data["current_user_url"])
+     print(data["repository_url"])
+
+
 
